@@ -8,11 +8,11 @@ app.use(bodyParser.json());
 
 mongoose.connect("mongodb+srv://dev:admin@cluster0.yphic.mongodb.net/bookservice",(err, res) =>{
 if(err) throw err;
-console.log('Database connected');
+console.log('Database cdddonnected');
 })
 const Books =mongoose.model('Books');
 app.get('/',(req,res) =>{
-    res.send('this is our main end point');
+    res.send('this is oddur main end point');
 })
 
 app.post('/book',(req,res) =>{
