@@ -22,7 +22,6 @@ router.get("/books",(req,res) => {
 
 router.post("/searchbooks",(req,res) => {
   let searchtext = req.body.searchtext;
-  console.log(searchtext);
   Books.find({"title": { "$regex":searchtext, "$options": "i" } },(err,result) =>{
       console.log(result);
       res.jsonp(result);
